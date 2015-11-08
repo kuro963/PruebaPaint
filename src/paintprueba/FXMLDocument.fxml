@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paintprueba.FXMLDocumentController">
+    <children>
+        
+    <AnchorPane layoutX="90.0" layoutY="30.0" prefHeight="597.0" prefWidth="635.0">
+         <children> 
+            <SubScene fx:id="sub1" fill="WHITE" height="642.0" layoutX="-21.0" layoutY="-15.0" onMouseDragged="#drag" onMousePressed="#onMousePressedListener" onMouseReleased="#onReleased" width="746.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+            <ToolBar layoutX="-91.0" layoutY="-11.0" orientation="VERTICAL" prefHeight="635.0" prefWidth="70.0">
+              <items>
+                  <ColorPicker fx:id="colorPicker" editable="true" prefHeight="25.0" prefWidth="45.0" />
+                  <Button fx:id="btnBox" layoutX="5.0" layoutY="45.0" mnemonicParsing="false" onAction="#setB" />
+                  <Button fx:id="btnCylinder" layoutX="5.0" layoutY="97.0" mnemonicParsing="false" onAction="#setC" />
+                   <Button fx:id="btnLine" mnemonicParsing="false" onAction="#setLine" />
+                  <Button fx:id="btnBorrar" layoutX="5.0" layoutY="170.0" mnemonicParsing="false" onAction="#borrar" />
+              </items>
+            </ToolBar>
+         </children>
+    </AnchorPane>
+<MenuBar layoutX="0.0" layoutY="-5.0" prefHeight="25.0" prefWidth="815.0">
+  <menus>
+    <Menu mnemonicParsing="false" text="Archivo">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#closeButtonAction" text="Close" />
+      </items>
+    </Menu>
+    <Menu text="Editar">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#clear" text="Restablecer" />
+            <Menu mnemonicParsing="false" text="Figuras 3D">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#setB" text="Cubo" />
+                  <MenuItem mnemonicParsing="false" onAction="#setC" text="Cilindro" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Figuras 2D">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#setLine" text="Linea" />
+              </items>
+            </Menu>
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Ayuda">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#AcercaDe" text="Creditos" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>
+    </children>
+</AnchorPane>
